@@ -1,0 +1,9 @@
+.wp-block-button__link {
+    color: var(--color-red);
+    background-color: var(--color-black);
+    border-radius: 5px;
+    box-shadow: none;
+    text-decoration: none;
+    padding: calc(.667em + 2px) calc(1.333em + 2px);
+    font-size: 1.125em
+}
