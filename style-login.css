@@ -37,6 +37,7 @@
 body {
     background: url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
     background-size: cover;
+    font-family: var(--font-sans);
 }
 
 #login {
@@ -48,7 +49,7 @@ body {
 .login form {
     margin-top: 20px;
     margin-left: 0;
-    padding: 400px 50px 50px 50px;
+    padding: 300px 50px 50px 50px;
     font-weight: 400;
     overflow: hidden;
     background: #fff;
