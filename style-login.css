@@ -43,7 +43,7 @@ body {
     width: 20vw;
     padding: 5% 0 0;
     margin: auto;
-    }
+}
 
 .login form {
     margin-top: 20px;
@@ -52,7 +52,22 @@ body {
     font-weight: 400;
     overflow: hidden;
     background: #fff;
-    border-radius: 30px;
+    border-radius: 20px;
     border: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
+    box-shadow: none;
+}
+
+.login #login_error,
+.login .message,
+.login .success {
+    border-radius: 20px;
+    border-left: none;
+    border: 1px solid white;
+    color: white;
+    padding: 12px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    background-color: transparent;
+    box-shadow: none;
+    word-wrap: break-word;
 }
