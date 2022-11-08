@@ -20,7 +20,7 @@
 :root {
     --color-black: rgb(18, 18, 18);
     --color-white: white;
-    --color-red: hsl(0, 0%, 71%);
+    --color-red: #00ff00;
 
     --font-size-base: 18px;
     --font-size-copy: 14px;
@@ -71,3 +71,7 @@ body {
     box-shadow: none;
     word-wrap: break-word;
 }
+
+.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover {
+    color: var(--color-red);
+    }
