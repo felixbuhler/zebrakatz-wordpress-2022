@@ -251,7 +251,7 @@ add_action( 'customize_register', 'prefix_customize_register' );
 
 function zebrakatz_home_image($wp_customize){
  
-    $wp_customize->add_setting( 'diwp_logo', array(
+    $wp_customize->add_setting( 'zebrakatz_background_image', array(
         'default' => get_theme_file_uri('assets/image/logo.jpg'), // Add Default Image URL 
         'sanitize_callback' => 'esc_url_raw'
     ));
