@@ -271,3 +271,12 @@ function zebrakatz_home_image($wp_customize){
 }
  
 add_action( 'customize_register', 'zebrakatz_home_image' );
+
+/* Change Dashboard Default */
+
+function loginRedirect( $redirect_to, $request, $user ){
+    if( is_array( $user->roles ) ) {
+        return home_url() . "/wp-admin/edit.php?post_type=page";
+    }
+}
+add_filter("login_redirect", "loginRedirect", 10, 3);
