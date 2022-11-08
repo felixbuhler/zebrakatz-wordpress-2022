@@ -351,9 +351,8 @@ footer.open,
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: url(https://zebrakatz.com/wp-content/uploads/2020/02/test-about2.jpg);
-    background-size: cover;
-    background-position: top center;
+    background-size: cover !important;
+    background-position: top center !important;
 }
 
 /* Footer */

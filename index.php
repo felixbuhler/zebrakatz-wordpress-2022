@@ -5,7 +5,6 @@
 <!--  
 
 Designed and developed by
-
  ____  ____  __    ____  _  _          
 ( ___)( ___)(  )  (_  _)( \/ )         
  )__)  )__)  )(__  _)(_  )  (          
@@ -105,7 +104,7 @@ www.felix-buhler.de
     </div>
 
 
-    <div id="backdrop">
+    <div id="backdrop" style="background: <?php echo get_theme_mod('zebrakatz_background_image'); ?>, var(--color-black);">
     </div>
 
     <?php
