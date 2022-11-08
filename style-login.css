@@ -36,5 +36,16 @@
 
 body {
     background: var(--color-black);
-    color: white;
+}
+
+.login form {
+    margin-top: 20px;
+    margin-left: 0;
+    padding: 26px 24px 34px;
+    font-weight: 400;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
 }
