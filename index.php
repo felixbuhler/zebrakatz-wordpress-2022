@@ -2,6 +2,23 @@
 <html <?php language_attributes(); ?>
 <?php zebrakatz_schema_type(); ?>>
 
+<!--  
+
+Designed and developed by
+
+ ____  ____  __    ____  _  _          
+( ___)( ___)(  )  (_  _)( \/ )         
+ )__)  )__)  )(__  _)(_  )  (          
+(__)  (____)(____)(____)(_/\_)         
+ ____  __  __  _   _  __    ____  ____ 
+(  _ \(  )(  )( )_( )(  )  ( ___)(  _ \
+ ) _ < )(__)(  ) _ (  )(__  )__)  )   /
+(____/(______)(_) (_)(____)(____)(_)\_)
+
+www.felix-buhler.de
+
+-->
+
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
