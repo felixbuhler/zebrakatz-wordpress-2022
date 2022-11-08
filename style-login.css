@@ -1,3 +1,40 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-Regular.ttf') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilda Display';
+    src: url('fonts/GildaDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Root */
+
+:root {
+    --color-black: rgb(18, 18, 18);
+    --color-white: white;
+    --color-red: hsl(0, 0%, 71%);
+
+    --font-size-base: 18px;
+    --font-size-copy: 14px;
+
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Gilda Display';
+
+    --header-footer-width: 50vw;
+
+    --menu-edge: 20px;
+    --margin-bottom: 40px;
+}
+
 body {
-    background: red;
+    background: var(--color-black);
+    color: white;
 }
