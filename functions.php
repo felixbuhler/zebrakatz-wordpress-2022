@@ -246,3 +246,28 @@ $wp_customize->add_control( 'center-left', array(
 
 }
 add_action( 'customize_register', 'prefix_customize_register' );
+
+/* Background Image */
+
+function zebrakatz_home_image($wp_customize){
+ 
+    $wp_customize->add_setting( 'diwp_logo', array(
+        'default' => get_theme_file_uri('assets/image/logo.jpg'), // Add Default Image URL 
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+ 
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'zebrakatz_image_control', array(
+        'label' => 'Background Image',
+        'priority' => 20,
+        'section' => 'title_tagline',
+        'settings' => 'zebrakatz_background_image',
+        'button_labels' => array(// All These labels are optional
+                    'select' => 'Select Logo',
+                    'remove' => 'Remove Logo',
+                    'change' => 'Change Logo',
+                    )
+    )));
+ 
+}
+ 
+add_action( 'customize_register', 'zebrakatz_home_image' );
