@@ -431,7 +431,7 @@ footer a:last-of-type {
 
 @media only screen and (max-width: 900px) {
     :root {
-        --font-size-base: 16px;
+        --font-size-base: 14px;
     }
 
     .content-box .headline-wrapper h2 {
