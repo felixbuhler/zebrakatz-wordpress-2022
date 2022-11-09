@@ -288,3 +288,12 @@ function my_login_stylesheet() {
     wp_enqueue_script( 'custom-login', get_stylesheet_directory_uri() . '/style-login.js' );
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
+function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1:after, .login h1:after {
+            content:"<?php echo the_title() ?>"
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
