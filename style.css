@@ -456,4 +456,16 @@ footer a:last-of-type {
     .wp-block-button__link {
         font-size: var(--font-size-base);
     }
+
+    #navigation ul li.navigation-item {
+        padding-bottom: 18px;
+
+        border-top: calc(1.5 * 1px) solid transparent;
+        border-bottom: calc(1.5 * 1px) solid transparent;
+    }
+
+    #navigation ul li.navigation-item:hover {
+        border-top: calc(1.5 * 1px) solid currentColor;
+        border-bottom: calc(1.5 * 1px)  solid currentColor;
+    }
 }
