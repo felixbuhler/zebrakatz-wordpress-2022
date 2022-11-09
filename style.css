@@ -142,7 +142,7 @@ footer.open,
 }
 
 #navigation ul li.navigation-item:hover {
-    color: white;
+    color: var(--color-black);
     border-top: 2px solid currentColor;
     border-bottom: 2px solid currentColor;
 }
