@@ -43,7 +43,7 @@ Tags: zebrakatz
 :root {
     --color-black: rgb(18, 18, 18);
     --color-white: white;
-    --color-red: hsl(255, 100%, 73%);
+    --color-red: hsl(0, 0%, 100%);
 
 
     --font-size-base: 18px;
