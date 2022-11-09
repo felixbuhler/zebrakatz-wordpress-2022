@@ -44,7 +44,7 @@ Tags: zebrakatz
     --color-black: rgb(18, 18, 18);
     --color-white: white;
     --color-red: hsl(255, 100%, 73%);
-    
+
 
     --font-size-base: 18px;
     --font-size-copy: 14px;
@@ -293,7 +293,8 @@ footer.open,
     margin-bottom: 20px;
 }
 
-.content-box>p, .content-box .wp-block-columns {
+.content-box>p,
+.content-box .wp-block-columns {
     padding: 0 10vw;
 }
 
@@ -416,4 +417,39 @@ footer a:last-of-type {
 
 .wp-block {
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    .content-box .headline-wrapper h2 {
+        display: inline-block;
+        border-radius: 25px;
+        margin-bottom: 100px;
+        font-size: 6rem;
+        line-height: 1em;
+        text-align: justify-all;
+        text-transform: uppercase;
+        font-family: var(--font-serif);
+    }
+
+    .content-box p {
+        padding: 0;
+        line-height: 1.5rem;
+        font-size: var(--font-size-base);
+    }
+
+    .wp-block-quote p {
+        padding: 0;
+        font-size: 1.5em;
+        line-height: 1.3em;
+        text-align: left;
+        text-indent: 0vw;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .wp-block-quote p {
+        font-size: 2.25em;
+        line-height: 1.3em;
+
+    }
 }
