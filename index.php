@@ -104,7 +104,7 @@ www.felix-buhler.de
     </div>
 
 
-    <div id="backdrop" style="background: <?php echo get_theme_mod('zebrakatz_background_image'); ?>, var(--color-black);">
+    <div id="backdrop" style="background: url(<?php echo get_theme_mod('zebrakatz_background_image'); ?>), var(--color-black);">
     </div>
 
     <?php
