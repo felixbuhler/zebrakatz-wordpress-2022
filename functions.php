@@ -292,7 +292,7 @@ add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 function my_login_logo() { ?>
     <style type="text/css">
         #login h1:after, .login h1:after {
-            content:"<?php echo the_title() ?>"
+            content:"<?php echo get_bloginfo( 'name' ); ?>"
         }
     </style>
 <?php }

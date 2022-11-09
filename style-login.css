@@ -20,7 +20,8 @@
 :root {
     --color-black: rgb(18, 18, 18);
     --color-white: white;
-    --color-red: #00ff00;
+    --color-accent: rgb(159, 126, 255);
+    --color-accent-hover: rgb(122, 92, 214);
 
     --font-size-base: 18px;
     --font-size-copy: 14px;
@@ -35,8 +36,7 @@
 }
 
 body {
-    background: url(https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2t5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60);
-    background-size: cover;
+    background: var(--color-accent);
     font-family: var(--font-sans);
 }
 
@@ -64,8 +64,8 @@ body {
 .login .success {
     border-radius: 20px;
     border-left: none;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
     padding: 12px;
     margin-left: 0;
     margin-bottom: 20px;
@@ -77,7 +77,14 @@ body {
 .login #backtoblog a:hover,
 .login #nav a:hover,
 .login h1 a:hover {
-    color: var(--color-red);
+    color: var(--color-white);
+}
+
+.login h1,
+#login h1 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .login h1 a,
@@ -100,10 +107,91 @@ body {
     text-indent: 0px;
     outline: none;
     overflow: hidden;
-    display: block; font-size: 0px;
+    display: block;
+    font-size: 0px;
 }
 
-.login h1:after,
-#login h1:after {
-    content: "Test";
+.login #backtoblog a,
+.login #nav a,
+#login h1:after,
+.login h1:after {
+    color: var(--color-black);
+}
+
+p#nav,
+p#backtoblog {
+    text-align: center;
+}
+
+.login label {
+    font-size: 14px;
+    line-height: 1.5;
+    display: inline-block;
+    margin-bottom: 3px;
+    color: var(--color-black);
+}
+
+.wp-core-ui .button-primary {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-white);
+    text-decoration: none;
+    text-shadow: none;
+}
+
+
+
+.login .button.wp-hide-pw {
+    color: var(--color-accent);
+}
+
+.login .button.wp-hide-pw:hover {
+    color: var(--color-accent-hover);
+}
+
+.wp-core-ui .button-primary:hover {
+    background: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    color: var(--color-white);
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.wp-core-ui .button,
+.wp-core-ui .button-primary,
+.wp-core-ui .button-secondary {
+    border-radius: 10px;
+}
+
+input[type=checkbox]:focus,
+input[type=color]:focus,
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=datetime]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=radio]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 1px var(--color-accent);
+    outline: 2px solid transparent;
+}
+
+input[type=checkbox]:checked::before {
+    color: var(--color-black);
+    content: "⨯";
+    font-size: 2.5em;
+    margin: 0;
+    margin-left: -0.09em;
+    height: 1.3125rem;
+    width: 1.3125rem;
 }
