@@ -444,6 +444,10 @@ footer a:last-of-type {
         text-align: left;
         text-indent: 0vw;
     }
+
+    .wp-block-button__link {
+        font-size: var(--font-size-base);
+    }
 }
 
 @media only screen and (max-width: 1100px) {
