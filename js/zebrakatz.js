@@ -36,6 +36,7 @@ jQuery(document).ready(function ($) {
             $("header").removeClass("open");
             $("footer").removeClass("open");
             $(".socials").removeClass("open");
+            $("h1#logo").removeClass("open");
 
         } else {
             $(".content-box").removeClass("open");
@@ -44,6 +45,7 @@ jQuery(document).ready(function ($) {
             $("header").addClass("open");
             $("footer").addClass("open");
             $(".socials").addClass("open");
+            $("h1#logo").addClass("open");
         }
 
     });
@@ -56,6 +58,7 @@ jQuery(document).ready(function ($) {
             $("#navigation").removeClass("open");
             $("header").removeClass("open");
             $("footer").removeClass("open");
+            $("h1#logo").removeClass("open");
         } else {
         }
 
@@ -69,10 +72,12 @@ jQuery(document).ready(function ($) {
 
         $(document).mousemove(function (e) {
             var $width = ($(document).width()) / 100;
+            var $widthFilter = ($(document).width()) / 10;
             var $height = ($(document).height()) / 255;
             var $brightness = parseInt(e.pageX / $width / 4 + 50);
+            var $brightnessFilter = parseInt(e.pageX / $widthFilter / 10 / 4 + 50);
             var $hue = parseInt(e.pageY / $height);
-            $(":root").css({"--color-red": "hsl(" + $hue + ", 100%," + $brightness + "%)"});
+            $(":root").css({ "--color-red": "hsl(" + $hue + ", 100%," + $brightness + "%)" });
         });
     });
 

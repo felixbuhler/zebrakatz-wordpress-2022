@@ -87,6 +87,37 @@ h1 {
     text-transform: uppercase;
 }
 
+
+
+h1#logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+h1#logo div {
+    width: 100%;
+    height: 100%;
+    display: block;
+    height: auto;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: top center !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+   
+}
+
+h1#logo div img {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
 /* Header */
 
 /* Header › Logo */
@@ -215,7 +246,7 @@ footer.open,
     background: blueviolet;
     display: block;
     z-index: 8;
-    padding: 85px 20vw 200px 20vw;
+    padding: 140px 20vw 200px 20vw;
     -webkit-transition: var(--content-box-anim);
     -moz-transition: var(--content-box-anim);
     -ms-transition: var(--content-box-anim);
@@ -466,6 +497,6 @@ footer a:last-of-type {
 
     #navigation ul li.navigation-item:hover {
         border-top: calc(1.5 * 1px) solid currentColor;
-        border-bottom: calc(1.5 * 1px)  solid currentColor;
+        border-bottom: calc(1.5 * 1px) solid currentColor;
     }
 }

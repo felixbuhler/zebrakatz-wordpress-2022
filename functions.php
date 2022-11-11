@@ -8,10 +8,10 @@ function zebrakatz_setup()
     add_theme_support( 'wp-block-styles' );
     add_theme_support('responsive-embeds');
     add_theme_support( 'editor-styles' );
+    add_theme_support( 'custom-logo' );
     add_editor_style( get_stylesheet_uri() );
     add_theme_support('automatic-feed-links');
     add_theme_support('html5', array('search-form', 'navigation-widgets'));
-    add_theme_support('woocommerce');
     global $content_width;
     if (!isset($content_width)) {
         $content_width = 1920;
@@ -297,3 +297,44 @@ function my_login_logo() { ?>
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+/* Custom Logo */
+
+function zebrakatz_custom_logo() {
+	$defaults = array(
+		'height'               => 100,
+		'width'                => 400,
+		'flex-height'          => true,
+		'flex-width'           => true,
+		'header-text'          => array( 'site-title', 'site-description' ),
+		'unlink-homepage-logo' => true, 
+	);
+	add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'zebrakatz_custom_logo' );
+
+/* Allow SVG */
+
+function add_upload_ext($checked, $file, $filename, $mimes){
+ 
+    if(!$checked['type']){
+        $wp_filetype = wp_check_filetype( $filename, $mimes );
+        $ext = $wp_filetype['ext'];
+        $type = $wp_filetype['type'];
+        $proper_filename = $filename;
+     
+        if($type && 0 === strpos($type, 'image/') && $ext !== 'svg'){
+            $ext = $type = false;
+        }
+        $checked = compact('ext','type','proper_filename');
+    }
+    return $checked;
+}
+add_filter('wp_check_filetype_and_ext', 'add_upload_ext', 10, 4);
+
+/* Remove Frontend Admin Bar */
+
+add_action('after_setup_theme', 'remove_admin_bar');
+function remove_admin_bar() {
+    show_admin_bar(false);
+}
